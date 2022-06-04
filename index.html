@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
   <title>Frontend Mentor | Base Apparel coming soon page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -49,8 +50,9 @@
             Hello fellow shoppers! We're currently building our new fashion store.
             Add your email below to stay up-to-date with announcements and our launch deals.
           </p>
-          <form action="javascript:void(0)" class="from-active">
-            <input class="input-active" type="email" name="email" id="email" placeholder="Email Address" required>
+          <!-- <form action="javascript:void(0)" class="from-active"> -->
+          <form id="myForm" action="#" class="from-active2" onsubmit="return check()" novalidate="">
+            <input class="input-active2" type="email" name="femail" id="email" placeholder="Email Address" required>
             <button type="submit" class="flex-center"><img src="images/icon-arrow.svg" alt="submit"></button>
           </form>
         </div>
@@ -68,6 +70,37 @@
       </p>
     </footer>
   </div>
+
+  <script>
+    function check() {
+
+      let valid = true,
+        // error = "",
+        mainForm = "",
+        input = "";
+
+
+      field = document.getElementById("email");
+      mainForm = document.getElementById("myForm");
+      // error = document.getElementById("cname");
+      if (!field.checkValidity()) {
+        valid = false;
+        field.classList.add("input-active");
+        mainForm.classList.add("from-active");
+
+      } else {
+        field.classList.remove("input-active");
+        document.getElementById("myForm").classList.remove("from-active")
+        mainForm.classList.remove("from-active");
+
+      }
+
+
+      return valid;
+    }
+  </script>
+
+
 </body>
 
 </html>

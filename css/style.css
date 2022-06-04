@@ -477,10 +477,11 @@ input {
   display: block;
   position: relative;
   width: 100%;
-  border: 1px solid #ce9797;
+  border: 2px solid #ce9797;
   border-radius: 40px;
   padding: 16px 150px 16px 34px;
   background: transparent;
+  outline: none;
 }
 
 .input-active {
