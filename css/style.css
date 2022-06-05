@@ -523,7 +523,7 @@ button:hover {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   .text__img {
     width: 100%;
   }
@@ -539,13 +539,14 @@ button:hover {
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  h1, p {
+  h1,
+  p {
     width: 100%;
     text-align: center;
     padding: 0 1rem;
   }
   h1 {
-    font-size: calc(30px + 12*( 100vw - 300px ) / 960);
+    font-size: calc(30px + 12*(100vw - 300px) / 960);
   }
   .main-content {
     padding: 2rem 0 3rem;
